@@ -1,1 +1,2 @@
-spring.application.name=Short_url_project_02
+server:
+  port: 8080
