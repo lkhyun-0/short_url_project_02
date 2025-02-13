@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for lkh-short-url-project-02-morning-brook-5648 on 2025-02-13T15:48:30+09:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'lkh-short-url-project-02-morning-brook-5648'
+primary_region = 'nrt'
+
+[build]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
