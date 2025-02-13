@@ -4,6 +4,7 @@ server:
     profiles:
       active: dev
       include: secret
-  custom:
-    site:
-      name: "MyApp"
+custom:
+  site:
+    name: "MyDefaultSite"
+
