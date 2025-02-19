@@ -1,4 +1,4 @@
-package com.example.short_url_project_02;
+package com.example.short_url_project_02.domain.home.home.controller;
 
 
 import org.springframework.beans.factory.annotation.Value;
@@ -10,19 +10,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HomeController {
 
     @Value("${custom.site.name}")
-    private String siteName;
-    @Value("${custom.secret.key:default-secret-key}") // 기본값 추가
+    private String customSiteName;
+
+    @Value("${custom.secret.key}")
     private String secretKey;
 
     @GetMapping("/")
     @ResponseBody
     public String home() {
-        return "main page!!!!!!!!!!!!!!!!" + siteName;
-
+        return "Main Page!!! " + customSiteName;
     }
 
     @GetMapping("/secretKey")
+    @ResponseBody
     public String secretKey() {
-        return "Secret Key: " + secretKey;
+        return "secretKey :  " + secretKey;
     }
 }

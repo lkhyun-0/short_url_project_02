@@ -1,5 +1,30 @@
 server:
   port: 8080
+spring:
+  profiles:
+    active: dev
+    include: secret
+  datasource:
+    url: jdbc:mysql://172.17.0.1:3306/surl_prod   # 도커 기반으로 돌아가는 mysql이라 172.17.0.1:3306
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: false
+        highlight_sql: false
+        use_sql_comments: false
 custom:
   site:
-    name: "my site prod"
+    name: "My Site - prod"
+logging:
+  level:
+    com.koreait.short_url_project_02: INFO
+    org.hibernate.SQL: INFO
+    org.hibernate.orm.jdbc.bind: INFO
+    org.hibernate.orm.jdbc.extract: INFO
+    org.springframework.transaction.interceptor: INFO
