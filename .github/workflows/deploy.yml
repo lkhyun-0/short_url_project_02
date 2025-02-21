@@ -11,10 +11,6 @@ on:
     branches:
       - 'main' # 브랜치 주의
 
-permissions:
-  contents: read
-  packages: write
-
 jobs:
   makeTagAndRelease:
     runs-on: ubuntu-latest
