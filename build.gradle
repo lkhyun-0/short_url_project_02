@@ -38,6 +38,10 @@ dependencies {
     implementation("org.hibernate.orm:hibernate-core:6.6.5.Final") // 최신 버전
     implementation("jakarta.persistence:jakarta.persistence-api:3.1.0") // 버전 맞추기
 
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'      // 컨테이너 교체 시기 체크하는 놈
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'    // 세션 임시저장 해주는 놈 !
+    implementation 'org.springframework.session:spring-session-data-redis'
+
 }
 
 tasks.named('test') {

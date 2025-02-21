@@ -4,6 +4,10 @@ spring:
   profiles:
     active: dev
     include: secret
+  autoconfigure:  #로컬환경에서는 레디스가 없음 - 그거 가지고 오류 보여주지마셈  레디스는 ec2에 이씀
+    exclude:
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+      - org.springframework.boot.autoconfigure.session.SessionAutoConfiguration
   datasource:
     #url: jdbc:mysql://localhost:3307/?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
     #username: root
