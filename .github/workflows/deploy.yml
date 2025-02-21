@@ -12,8 +12,8 @@ on:
       - 'main' # 브랜치 주의
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
+  packages: write
 
 jobs:
   makeTagAndRelease:
