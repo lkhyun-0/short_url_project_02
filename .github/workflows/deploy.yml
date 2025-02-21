@@ -85,3 +85,7 @@ jobs:
             curl -o /dockerProjects/surl/zero_downtime_deploy.py https://raw.githubusercontent.com/lkhyun-0/short_url_project_02/main/infraScript/zero_downtime_deploy.py 
             chmod +x /dockerProjects/surl/zero_downtime_deploy.py
             /dockerProjects/surl/zero_downtime_deploy.py
+  release:
+    permissions:
+      contents: write
+      pull-requests: write
