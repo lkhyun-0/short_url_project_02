@@ -26,7 +26,7 @@ public class ArticleService {
     // - 이번에 생성된 게시글의 번호
     // - 게시글 생성 메세지
     // - 결과 코드
-    // -
+    // -    asd
     @Transactional
     public RsData<Article> write(Member member, String title, String body) {
         Article article = Article.builder()
