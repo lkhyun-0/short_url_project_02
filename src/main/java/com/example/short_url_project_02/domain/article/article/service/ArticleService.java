@@ -2,6 +2,7 @@ package com.example.short_url_project_02.domain.article.article.service;
 
 import com.example.short_url_project_02.domain.article.article.entity.Article;
 import com.example.short_url_project_02.domain.article.article.repository.ArticleRepository;
+import com.example.short_url_project_02.domain.member.member.entity.Member;
 import com.example.short_url_project_02.global.rsData.RsData;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -26,8 +27,9 @@ public class ArticleService {
     // - 게시글 생성 메세지
     // - 결과 코드
     @Transactional
-    public RsData<Article> write(String title, String body) {
+    public RsData<Article> write(Member member, String title, String body) {
         Article article = Article.builder()
+                .author(member)
                 .title(title)
                 .body(body)
                 .build();

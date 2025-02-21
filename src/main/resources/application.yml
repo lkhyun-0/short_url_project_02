@@ -5,11 +5,19 @@ spring:
     active: dev
     include: secret
   datasource:
-    url: jdbc:postgresql://localhost:5432/surl_dev
-    username: postgres
-    password: koreait123414
-    driver-class-name: org.postgresql.Driver
+    #url: jdbc:mysql://localhost:3307/?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    #username: root
+    #password:
+    #driver-class-name: com.mysql.cj.jdbc.Driver
 
+    #url: jdbc:postgresql://localhost:5432/surl_dev 이건 포스트그리
+    #username: postgres
+    #password: koreait123414
+    #driver-class-name: org.postgresql.Driver
+    url: jdbc:h2:./db_dev;MODE=MySQL   #이건 h2
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
   jpa:
     hibernate:
       ddl-auto: update
@@ -19,9 +27,6 @@ spring:
         format_sql: true
         highlight_sql: true
         use_sql_comments: true
-custom:
-  site:
-    name: "My Site"
 logging:
   level:
     com.koreait.short_url_project_02: DEBUG
@@ -29,3 +34,6 @@ logging:
     org.hibernate.orm.jdbc.bind: TRACE
     org.hibernate.orm.jdbc.extract: TRACE
     org.springframework.transaction.interceptor: TRACE
+custom:
+  site:
+    name: "My Site"

@@ -1,6 +1,7 @@
 package com.example.short_url_project_02.global.exceptions;
 
 import com.example.short_url_project_02.global.rsData.RsData;
+import com.example.short_url_project_02.standard.dto.Empty;
 import lombok.Getter;
 
 @Getter
