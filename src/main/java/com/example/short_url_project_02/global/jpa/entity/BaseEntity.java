@@ -17,4 +17,6 @@ public class BaseEntity {
     @GeneratedValue(strategy = IDENTITY)
     private long id;
 
+
+
 }
