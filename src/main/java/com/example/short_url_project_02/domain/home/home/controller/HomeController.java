@@ -18,7 +18,7 @@ public class HomeController {
     @GetMapping("/")
     @ResponseBody
     public String home() {
-        return "1234 Main Page!!! " + customSiteName;
+        return "12345 Main Page!!! " + customSiteName;
     }
 
     @GetMapping("/secretKey")
