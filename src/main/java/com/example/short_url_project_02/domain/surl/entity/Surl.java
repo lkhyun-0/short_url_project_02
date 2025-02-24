@@ -25,6 +25,7 @@ public class Surl extends BaseTime {
     @Setter(AccessLevel.NONE)
     private long count;
 
+
     public void increaseCount() {
         count++;
     }
